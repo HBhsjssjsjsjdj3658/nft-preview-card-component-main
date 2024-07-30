@@ -1,0 +1,133 @@
+*:root{
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  
+  --mainblue: hsl(217, 54%, 11%);
+  --cardblue: hsl(216, 50%, 16%);
+  --lineblue: hsl(215, 32%, 27%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background: var(--mainblue);
+}
+.card{
+  width: 40%;
+  background: var(--cardblue);
+  padding: 30px;
+  margin: 55px auto;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+.image{
+  position: relative;
+}
+.image div{
+  width: 100%;
+  height: 98.5%;
+  background: var(--Cyan);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  opacity: 0.5;
+  display: none;
+  cursor: pointer;
+}
+.image .view{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.image:hover div{
+  display: inline-block;
+}
+.image:hover div + .view{
+  display: inline-block;
+}
+.card img{
+  width: 100%;
+  border-radius: 10px;
+}
+.card .section h3{
+  margin: 20px 0px 13px;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+}
+.card .section h3:hover{
+  color: var(--Cyan);
+}
+.card .section p{
+  color: var(--Softblue);
+  line-height: 27px;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.card .aside{
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.9px solid var(--lineblue);
+}
+.card .aside h4{
+  color: var(--Cyan);
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.aside h4 svg{
+  transform: translateY(3px);
+  margin-right: 3px;
+}
+.aside .days p{
+  color: var(--Softblue);
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.aside .days svg{
+  transform: translateY(3px);
+  margin-right: 3px;
+}
+.card_footer img{
+  float: left;
+  width: 35px;
+  border-radius: 50%;
+  border: 1.12px solid white;
+  
+}
+.card_footer p{
+  margin: 0 0 10px 50px;
+  color: var(--Softblue);
+  font-weight: 400;
+  transform: translateY(7px);
+  font-size: 16px;
+}
+.card_footer span{
+  color: #fff;
+  cursor: pointer;
+}
+.card_footer span:hover{
+  color: var(--Cyan);
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 420px) {
+  .card{
+  width: 87%;
+}+
+}
